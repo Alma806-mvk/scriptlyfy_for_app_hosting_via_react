@@ -71,7 +71,7 @@ export function Header() {
       <div className="px-6 sm:px-8 lg:px-12 xl:px-16 2xl:px-20 py-3 flex items-center justify-between w-full">
         <a href="/" className="flex items-center gap-2">
           <Image
-            src="/logo-scriptlyfy.png"
+            src="/logo.svg"
             alt="Scriptlyfy"
             width={32}
             height={32}
@@ -243,7 +243,7 @@ export function Footer() {
         <div>
           <div className="flex items-center gap-2">
             <Image
-              src="/logo-scriptlyfy.png"
+              src="/logo.svg"
               alt="Scriptlyfy"
               width={32}
               height={32}
