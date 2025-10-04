@@ -15,7 +15,8 @@ type SEOProps = {
   noIndex?: boolean
 }
 
-const DEFAULT_OG_IMAGE = '/logo-scriptlyfy.png'
+// Default to the SVG logo that exists in this app's public/ to avoid 404s
+const DEFAULT_OG_IMAGE = '/icon.png'
 
 export default function SEO({
   title,
