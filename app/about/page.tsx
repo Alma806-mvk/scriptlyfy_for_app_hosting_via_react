@@ -1,5 +1,4 @@
 import SEO from '@/components/SEO'
-import LeadForm from '@/components/landing/LeadForm'
 import React from 'react'
 
 const CANONICAL = 'https://app.scriptlyfy.com/about'
@@ -220,11 +219,12 @@ export default function Page() {
                 Help Shape the Enrichment Layer
               </h2>
               <p className="text-slate-600 text-sm leading-relaxed mb-5">
-                Join early access to influence extraction depth, pattern surfacing UX, and repurposing
+                Create a free account to influence extraction depth, pattern surfacing UX, and repurposing
                 scaffold formats. We prioritize feedback with clear operator outcomes.
               </p>
               <div className="max-w-md not-prose">
-                <LeadForm />
+                <a href="/signup" className="inline-flex items-center rounded-md bg-[hsl(var(--brand))] px-5 py-3 text-white font-medium shadow hover:bg-[hsl(var(--brand))]/90">Get started for free</a>
+                <div className="mt-2 text-xs text-slate-600">Already have an account? <a href="/login" className="underline">Sign in</a></div>
               </div>
             </div>
           </div>

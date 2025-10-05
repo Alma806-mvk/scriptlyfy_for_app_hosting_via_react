@@ -1,6 +1,6 @@
 import React from 'react'
 import SEO from '@/components/SEO'
-import LeadForm from '@/components/landing/LeadForm'
+// Waitlist LeadForm removed in favor of real signup
 import { LastUpdated } from '@/components/LastUpdated'
 import { LogoStrip } from '@/components/LogoStrip'
 import { Testimonials } from '@/components/Testimonials'
@@ -83,7 +83,7 @@ export const BulkTranscribePageTemplate: React.FC<BulkTranscribePageTemplateProp
   const showLogos = props.includeSocialProof || props.showLogoStrip;
   const showTestimonials = props.includeSocialProof || props.showTestimonials;
   const heroVariant = props.heroVariant || 'gradient';
-  const scrollCta = props.primaryCtaText || 'Join early access';
+  const scrollCta = props.primaryCtaText || 'Get started for free';
   const hasSocialProofBlocks = showLogos || showTestimonials;
   return (
     <main className="relative">
@@ -229,12 +229,11 @@ export const BulkTranscribePageTemplate: React.FC<BulkTranscribePageTemplateProp
 
       {/* CTA */}
       <section id="bulk-cta" className="max-w-3xl mx-auto pt-8 pb-12 px-4">
-        <div className="rounded-xl border border-slate-200 p-6 bg-white shadow-sm">
-          <h2 className="text-lg font-semibold text-slate-900 mb-2">{props.ctaHeading || 'Get early access'}</h2>
-          <p className="text-slate-600 mb-4 text-sm leading-relaxed">{props.ctaSub || 'Join the waitlist and be first to use this capability.'}</p>
-          <div className="[&>*]:mb-0">
-            <LeadForm />
-          </div>
+        <div className="rounded-xl border border-slate-200 p-6 bg-white shadow-sm text-center">
+          <h2 className="text-lg font-semibold text-slate-900 mb-2">{props.ctaHeading || 'Get started for free'}</h2>
+          <p className="text-slate-600 mb-4 text-sm leading-relaxed">{props.ctaSub || 'Create a free account and start transcribing in minutes.'}</p>
+          <a href="/signup" className="inline-flex items-center rounded-md bg-[hsl(var(--brand))] px-5 py-3 text-white font-medium shadow hover:bg-[hsl(var(--brand))]/90">Get started for free</a>
+          <div className="mt-2 text-xs text-slate-600">Already have an account? <a href="/login" className="underline">Sign in</a></div>
         </div>
       </section>
 

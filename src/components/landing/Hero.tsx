@@ -1,6 +1,6 @@
 "use client";
 import { Shield, Zap } from "lucide-react";
-import InlineHeroLeadCapture from "@/components/landing/InlineHeroLeadCapture";
+// Waitlist form removed in favor of real signup
 
 // Helper for smooth scrolling and clean URLs
 const scrollToSection = (sectionId: string) => {
@@ -36,14 +36,10 @@ export default function Hero() {
           <div className="mt-6 flex flex-col sm:flex-row gap-3">
             <a
               href="/signup"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection("signup");
-              }}
-              aria-label="Join the waitlist"
+              aria-label="Get started for free"
               className="inline-flex w-full sm:w-auto items-center justify-center h-12 px-6 rounded-md bg-[hsl(var(--brand))] hover:bg-[hsl(var(--brand))]/90 text-white text-sm font-medium"
             >
-              Join the Waitlist
+              Get started for free
             </a>
             <a
               href="/demo"
@@ -57,7 +53,7 @@ export default function Hero() {
               See 3-Minute Demo
             </a>
           </div>
-          <InlineHeroLeadCapture />
+          {/* Inline waitlist capture removed */}
           <div className="mt-5 flex flex-wrap items-center gap-4 text-sm text-slate-600">
             <div className="inline-flex items-center gap-2">
               <Shield className="h-4 w-4 text-emerald-600" />

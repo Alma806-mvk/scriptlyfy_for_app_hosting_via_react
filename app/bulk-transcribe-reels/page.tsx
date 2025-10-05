@@ -62,7 +62,7 @@ export default function BulkTranscribeReelsPage() {
         { slug: '/bulk-transcribe-instagram-posts', label: 'Instagram Posts', short: 'Caption intelligence & comparison.' }
       ]}
       howToEnabled
-      ctaSub="Join the waitlist and be first to use automated Reel transcription & insight mining."
+  ctaSub="Create a free account and be first to use automated Reel transcription & insight mining."
     />
   );
 }

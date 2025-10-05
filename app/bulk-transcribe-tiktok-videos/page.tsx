@@ -62,7 +62,7 @@ export default function BulkTranscribeTikTokVideosPage() {
         { slug: '/bulk-transcribe-instagram-posts', label: 'Instagram Posts', short: 'Caption intelligence & comparison.' }
       ]}
       howToEnabled
-      ctaSub="Join the waitlist and be first to use automated TikTok transcription & pattern mining."
+  ctaSub="Create a free account and be first to use automated TikTok transcription & pattern mining."
     />
   );
 }

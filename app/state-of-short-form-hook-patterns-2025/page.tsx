@@ -2,7 +2,6 @@ import React from 'react'
 import SEO from '@/components/SEO'
 import { LastUpdated } from '@/components/LastUpdated'
 import { Testimonials } from '@/components/Testimonials'
-import LeadForm from '@/components/landing/LeadForm'
 
 const UPDATED = '2025-09-26'
 const CANONICAL = 'https://app.scriptlyfy.com/state-of-short-form-hook-patterns-2025'
@@ -176,8 +175,9 @@ export default function Page() {
           <div className="rounded-2xl border border-slate-200 bg-gradient-to-br from-white/80 via-white to-indigo-50/60 backdrop-blur p-8 flex flex-col lg:flex-row gap-8 lg:items-center">
             <div className="flex-1 max-w-xl">
               <h2 className="text-2xl font-bold tracking-tight text-slate-900 mb-3">Get The Full Labeled Dataset</h2>
-              <p className="text-slate-600 text-sm leading-relaxed mb-4">Join early access and receive structured hook exports, frequency deltas and emerging alerts straight to your workspace.</p>
-              <LeadForm />
+              <p className="text-slate-600 text-sm leading-relaxed mb-4">Create a free account and receive structured hook exports, frequency deltas and emerging alerts straight to your workspace.</p>
+              <a href="/signup" className="inline-flex items-center rounded-md bg-[hsl(var(--brand))] px-5 py-3 text-white font-medium shadow hover:bg-[hsl(var(--brand))]/90">Get started for free</a>
+              <div className="mt-2 text-xs text-slate-600">Already have an account? <a href="/login" className="underline">Sign in</a></div>
             </div>
             <div className="grid grid-cols-2 gap-4 text-[11px] w-full lg:w-auto lg:max-w-xs">
               {[

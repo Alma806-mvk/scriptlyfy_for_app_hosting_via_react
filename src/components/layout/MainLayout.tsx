@@ -1,5 +1,6 @@
 "use client";
 import { PropsWithChildren, useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {
@@ -137,12 +138,11 @@ export function Header() {
           </a>
         </nav>
         <div className="hidden md:flex items-center gap-3">
-          <Button
-            onClick={() => scrollToSection("signup")}
-            className="bg-[hsl(var(--brand))] hover:bg-[hsl(var(--brand))]/90"
-          >
-            Join Early Access
-          </Button>
+          <a href="/signup">
+            <Button className="bg-[hsl(var(--brand))] hover:bg-[hsl(var(--brand))]/90">
+              Get started for free
+            </Button>
+          </a>
         </div>
         {/* Mobile menu */}
         <Sheet open={open} onOpenChange={setOpen}>
@@ -220,12 +220,11 @@ export function Header() {
               </ul>
               <div className="mt-4">
                 <SheetClose asChild>
-                  <Button
-                    className="w-full bg-[hsl(var(--brand))] hover:bg-[hsl(var(--brand))]/90"
-                    onClick={() => scrollToSection("signup")}
-                  >
-                    Join Early Access
-                  </Button>
+                  <a href="/signup">
+                    <Button className="w-full bg-[hsl(var(--brand))] hover:bg-[hsl(var(--brand))]/90">
+                      Get started for free
+                    </Button>
+                  </a>
                 </SheetClose>
               </div>
             </nav>
@@ -323,15 +322,8 @@ export function Footer() {
               </a>
             </li>
             <li>
-              <a
-                href="/signup"
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection("signup");
-                }}
-                className="hover:text-slate-900"
-              >
-                Join Early Access
+              <a href="/signup" className="hover:text-slate-900">
+                Get started for free
               </a>
             </li>
           </ul>
@@ -358,6 +350,8 @@ export function Footer() {
 }
 
 export default function MainLayout({ children }: PropsWithChildren) {
+  const pathname = usePathname();
+  const hideChrome = pathname === "/signup" || pathname === "/login";
   useEffect(() => {
     const onPop = () => {
       const path = window.location.pathname.replace(/^\//, "");
@@ -379,11 +373,13 @@ export default function MainLayout({ children }: PropsWithChildren) {
       >
         Skip to content
       </a>
-      <Header />
+      {!hideChrome && <Header />}
       <main id="main">{children}</main>
-      <div data-observe="reveal">
-        <Footer />
-      </div>
+      {!hideChrome && (
+        <div data-observe="reveal">
+          <Footer />
+        </div>
+      )}
     </div>
   );
 }

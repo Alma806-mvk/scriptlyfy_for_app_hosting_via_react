@@ -9,7 +9,7 @@ import Pricing from '@/components/landing/Pricing'
 import Urgency from '@/components/landing/Urgency'
 import FAQ from '@/components/landing/FAQ'
 import RevealClient from '@/components/RevealClient'
-import LeadForm from '@/components/landing/LeadForm'
+// Waitlist LeadForm removed in favor of real signup
 
 export default function HomeContent() {
   return (
@@ -55,8 +55,13 @@ export default function HomeContent() {
         <FAQ />
       </div>
       <div data-observe="reveal" id="signup" className="container mx-auto px-4 py-16">
-        <div className="max-w-3xl mx-auto">
-          <LeadForm />
+        <div className="max-w-2xl mx-auto rounded-2xl border border-slate-200 bg-white p-6 shadow-sm text-center">
+          <h2 className="text-xl font-semibold text-slate-900">Ready to try Scriptlyfy?</h2>
+          <p className="mt-1 text-sm text-slate-600">Create a free account and start in minutes.</p>
+          <div className="mt-4">
+            <a href="/signup" className="inline-flex items-center rounded-md bg-[hsl(var(--brand))] px-5 py-3 text-white font-medium shadow hover:bg-[hsl(var(--brand))]/90">Get started for free</a>
+          </div>
+          <p className="mt-2 text-xs text-slate-600">Already have an account? <a href="/login" className="underline">Sign in</a></p>
         </div>
       </div>
     </RevealClient>

@@ -62,7 +62,7 @@ export default function BulkTranscribeYouTubeVideosPage() {
         { slug: '/bulk-transcribe-instagram-posts', label: 'Instagram Posts', short: 'Caption intelligence & comparison.' }
       ]}
       howToEnabled
-      ctaSub="Join the waitlist for multi-source YouTube transcription & structural insight."
+  ctaSub="Create a free account for multi-source YouTube transcription & structural insight."
     />
   );
 }

@@ -1,5 +1,4 @@
 import SEO from '@/components/SEO'
-import LeadForm from '@/components/landing/LeadForm'
 import { LastUpdated } from '@/components/LastUpdated'
 import { Testimonials } from '@/components/Testimonials'
 
@@ -196,8 +195,11 @@ export default function Page() {
         <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-gradient-to-br from-white/80 to-white/40 backdrop-blur p-10 shadow-sm">
           <div aria-hidden className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(168,85,247,0.15),transparent_60%)]" />
           <h2 id="cta-heading" className="relative text-2xl font-semibold tracking-tight mb-4">Unify your short‑form research & repurposing loop</h2>
-          <p className="relative text-slate-600 mb-6 text-sm sm:text-base max-w-lg">Join early access – accelerate ideation, pattern discovery, and script generation while we expand structural intelligence depth.</p>
-          <div className="relative"><LeadForm /></div>
+          <p className="relative text-slate-600 mb-6 text-sm sm:text-base max-w-lg">Get started for free — accelerate ideation, pattern discovery, and script generation while we expand structural intelligence depth.</p>
+          <div className="relative">
+            <a href="/signup" className="inline-flex items-center rounded-md bg-[hsl(var(--brand))] px-5 py-3 text-white font-medium shadow hover:bg-[hsl(var(--brand))]/90">Get started for free</a>
+            <div className="mt-2 text-xs text-slate-600">Already have an account? <a href="/login" className="underline">Sign in</a></div>
+          </div>
           <p className="relative mt-4 text-[11px] text-slate-500">Deterministic storage prevents duplicate billing. Roadmap: deeper structural tagging, multi-lingual normalization, creator performance overlays.</p>
         </div>
       </section>

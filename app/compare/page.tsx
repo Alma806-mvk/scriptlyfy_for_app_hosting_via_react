@@ -1,5 +1,4 @@
 import SEO from '@/components/SEO'
-import LeadForm from '@/components/landing/LeadForm'
 import { LastUpdated } from '@/components/LastUpdated'
 import { Testimonials } from '@/components/Testimonials'
 import { LogoStrip } from '@/components/LogoStrip'
@@ -166,7 +165,12 @@ export default function Page() {
       </header>
 
       <section className="mb-12">
-        <LeadForm />
+        <div className="rounded-lg border p-6 text-center bg-white">
+          <h2 className="text-lg font-semibold mb-2">Try Scriptlyfy</h2>
+          <p className="text-slate-600 mb-4 text-sm">Create a free account to evaluate the unified workflow.</p>
+          <a href="/signup" className="inline-flex items-center rounded-md bg-[hsl(var(--brand))] px-5 py-3 text-white font-medium shadow hover:bg-[hsl(var(--brand))]/90">Get started for free</a>
+          <div className="mt-2 text-xs text-slate-600">Already have an account? <a href="/login" className="underline">Sign in</a></div>
+        </div>
       </section>
 
       <section className="space-y-12">
@@ -278,10 +282,11 @@ export default function Page() {
         <div className="rounded-lg border p-6 text-center bg-slate-50">
           <h2 className="text-xl font-semibold mb-2">Ready to unify your short-form research workflow?</h2>
           <p className="text-slate-600 mb-4">
-            Join early access – ship strategy faster while we expand the feature surface.
+            Get started for free — ship strategy faster while we expand the feature surface.
           </p>
           <div className="max-w-md mx-auto">
-            <LeadForm />
+            <a href="/signup" className="inline-flex items-center rounded-md bg-[hsl(var(--brand))] px-5 py-3 text-white font-medium shadow hover:bg-[hsl(var(--brand))]/90">Get started for free</a>
+            <div className="mt-2 text-xs text-slate-600">Already have an account? <a href="/login" className="underline">Sign in</a></div>
           </div>
           <p className="text-xs text-slate-500 mt-4">
             Roadmap markers: Beta = usable today but evolving, Planned = committed upcoming, In Progress = actively
