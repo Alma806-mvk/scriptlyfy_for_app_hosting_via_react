@@ -333,7 +333,7 @@ export function Footer() {
           <ul className="mt-3 space-y-2 text-slate-600">
             <li>
               <a
-                href="mailto:creategenstudio@gmail.com"
+                href="mailto:emma@scriptlyfy.com"
                 className="hover:text-slate-900"
               >
                 Email support

@@ -3,7 +3,7 @@ import React from 'react'
 
 const CANONICAL = 'https://app.scriptlyfy.com/about'
 const UPDATED = new Date().toISOString().slice(0, 10)
-const SUPPORT_EMAIL = 'creategenstudio@gmail.com'
+const SUPPORT_EMAIL = 'emma@scriptlyfy.com'
 
 const nav: { id: string; label: string }[] = [
   { id: 'mission', label: 'Mission' },
